@@ -7,7 +7,7 @@ public class CalculatorMain {
         System.out.println(calculator.plus(10,20));
         System.out.println(calculator.minus(10,20));
         System.out.println(calculator.multiple(10,20));
-        System.out.println(calculator.divide(200,20));
+        System.out.println(calculator.divide(10,20));
     }
 
 }
