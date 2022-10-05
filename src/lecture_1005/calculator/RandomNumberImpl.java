@@ -1,6 +1,4 @@
-package lecture_1005;
-
-import java.util.Random;
+package lecture_1005.calculator;
 
 public class RandomNumberImpl implements RandomNumber{
     private int randomNumber;
