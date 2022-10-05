@@ -9,5 +9,9 @@ public class Main {
         RandomNumberGenerator randomNumberGenerator = new RandomNumberGenerator();
         Calculator randomNumberCalculator = new Calculator(randomNumberGenerator);
         randomNumberCalculator.plus();
+        
+        NumberGenerator specificNumberGenerator1 = new SpecificNumberGenerator();
+        Calculator calculator = new Calculator(10, specificNumberGenerator1);
+        calculator.plus();
     }
 }
