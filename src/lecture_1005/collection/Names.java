@@ -5,6 +5,16 @@ import java.util.List;
 
 public class Names {
     List<String> students = new ArrayList<>();
+    List<Student> studentObj = new ArrayList<>();
+
+    public List<Student> getStudentObj(){
+        this.studentObj.add(new Student(2, "곽철민", "github.com/cmkxak"));
+        this.studentObj.add(new Student(2, "홍길동", "github.com/cmkxak12"));
+        this.studentObj.add(new Student(2, "홍길순", "github.com/cmkxak1234"));
+        this.studentObj.add(new Student(2, "홍길민", "github.com/cmkxak4321"));
+        this.studentObj.add(new Student(2, "홍길수", "github.com/cmkxak444"));
+        return studentObj;
+    }
 
     public List<String> makeStudentList() {
         this.students.add("권하준");
