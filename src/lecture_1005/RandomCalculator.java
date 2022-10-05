@@ -1,0 +1,32 @@
+package lecture_1005;
+
+public class RandomCalculator {
+    private int a;
+    private RandomNumber randomNumber;
+
+    public RandomCalculator(int a, RandomNumberImpl randomNumber){
+        this.a = a;
+        this.randomNumber = randomNumber;
+    }
+
+    public int plus(){
+        return a + randomNumber.getRandomNumber();
+    }
+
+    public int minus(){
+        return a - randomNumber.getRandomNumber();
+    }
+
+    public int multiple(){
+        return a * randomNumber.getRandomNumber();
+    }
+
+    public int divide(){
+        try{
+            return a + randomNumber.getRandomNumber();
+        }catch(Exception e){
+            System.out.println("랜덤하게 생성된 숫자가 0입니다.");
+        }
+        return a + randomNumber.getRandomNumber();
+    }
+}
