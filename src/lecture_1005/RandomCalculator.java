@@ -21,12 +21,12 @@ public class RandomCalculator {
         return a * randomNumber.getRandomNumber();
     }
 
-    public int divide(){
+    public float divide(){
         try{
-            return a + randomNumber.getRandomNumber();
+            return (float) a / randomNumber.getRandomNumber() ;
         }catch(Exception e){
             System.out.println("랜덤하게 생성된 숫자가 0입니다.");
         }
-        return a + randomNumber.getRandomNumber();
+        return (float) a / randomNumber.getRandomNumber();
     }
 }
