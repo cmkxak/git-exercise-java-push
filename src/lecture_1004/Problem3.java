@@ -1,3 +1,5 @@
+package lecture_1004;
+
 import java.util.Scanner;
 
 public class Problem3 {

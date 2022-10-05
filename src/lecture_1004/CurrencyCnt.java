@@ -1,3 +1,5 @@
+package lecture_1004;
+
 public class CurrencyCnt {
     public static void main(String[] args) {
         int refund = 25400;
