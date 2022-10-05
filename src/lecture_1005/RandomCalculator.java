@@ -4,7 +4,7 @@ public class RandomCalculator {
     private int a;
     private RandomNumber randomNumber;
 
-    public RandomCalculator(int a, RandomNumberImpl randomNumber){
+    public RandomCalculator(int a, RandomNumber randomNumber){
         this.a = a;
         this.randomNumber = randomNumber;
     }
