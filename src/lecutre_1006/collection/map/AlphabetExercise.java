@@ -7,16 +7,14 @@ import java.util.Map;
 
 public class AlphabetExercise {
     public static void main(String[] args) {
-        String s = "weq123123asdfa";
-        String[] alphabets = s.split("");
-        Map<String, Integer> map = new HashMap<>();
+        String s = "1!@#$%%^!@#$%^weq123123asdfa";
+        Map<Character, Integer> map = new HashMap<>();
         int count = 0;
 
-        for (String alphabet : alphabets) {
-            char c = alphabet.charAt(0);
-            //1. 알파벳인지 판단
-            if( (c>=65 && c<=90) || (c>=97 && c<=122)) {
-                map.put(alphabet, ++count);
+        for(int i=0;i<s.length();i++){
+            char c = s.charAt(i);
+            if((c >= 65 && c<=90) || (c>=97 && c<=121)){
+                map.put(c, ++count);
             }
         }
         System.out.println("알파벳 개수 : " + count);
