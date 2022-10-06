@@ -1,4 +1,4 @@
-package lecutre_1006.list;
+package lecutre_1006.collection.list;
 
 import java.util.ArrayList;
 import java.util.List;

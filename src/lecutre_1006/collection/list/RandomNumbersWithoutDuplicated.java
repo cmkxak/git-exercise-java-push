@@ -1,4 +1,4 @@
-package lecutre_1006.list;
+package lecutre_1006.collection.list;
 
 import lecture_1005.numbergenerator.NumberGenerator;
 import lecture_1005.numbergenerator.RandomNumberGenerator;
