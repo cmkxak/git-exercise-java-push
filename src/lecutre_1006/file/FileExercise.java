@@ -11,4 +11,15 @@ public class FileExercise {
             System.out.println(file);
         }
     }
+    /**
+     * 출력된 파일 목록
+     * .\.git
+     * .\.gitignore
+     * .\.idea
+     * .\aFile.txt
+     * .\git-exercise-java-push.iml
+     * .\out
+     * .\README.md
+     * .\src
+     */
 }
