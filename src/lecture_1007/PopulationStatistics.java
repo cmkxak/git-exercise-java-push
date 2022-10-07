@@ -51,10 +51,9 @@ public class PopulationStatistics {
 
         String[] split = data.split(",");
 
-        for(int i =0;i<split.length; i++) {
-            fromSido = Integer.parseInt(split[0]);
-            toSido = Integer.parseInt(split[6]);
-        }
+        fromSido = Integer.parseInt(split[0]);
+        toSido = Integer.parseInt(split[6]);
+
         return new PopulationMove(fromSido, toSido);
     }
 
