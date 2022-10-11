@@ -1,11 +1,12 @@
 ## 📄 멋쟁이사자처럼 백엔드 스쿨 2기 자바 수업
-### 💬 git 사용법
-- git add . 혹은 git add .java 파일
-- git commit -m "commit message"
-- git push origin main
-
-### 💬 Intellij를 활용하여 자바 프로젝트 만들기
-- psvm → 메인 메소드 단축키 in Intellij
-- sout → println() 메소드 단축키 in Intellij
-- alt + shift + f10 → Run 단축 키, shift+f10 하면, 기존에 실행했던 파일이 실행됨
-- 하나의 단어를 잡고 같은 단어들을 여러개 클릭하기 : alt + j
+### 💬 10.04 - 10.07(Week 3)
+- Git 기초
+- List,Map,Set Collection
+- Wrapper 클래스와 String 클래스
+- 파일 입출력
+- <a href = "https://github.com/cmkxak/likelion-java-course/tree/Main/src/lecture/lecture_1007"> 대용량 데이터 프로젝트
+(2021년 서울시에서 가장 많이 이사간 지역은 어디일까?)</a>
+----
+### 💬 10.11 - 10.14(Week 4)
+- 알고리즘 (자리수 더하기, 자리수 합 구하기)
+- DB 기초 수업
