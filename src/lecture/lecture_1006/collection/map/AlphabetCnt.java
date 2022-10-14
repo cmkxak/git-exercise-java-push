@@ -1,4 +1,4 @@
-package lecture.lecutre_1006.collection.map;
+package lecture.lecture_1006.collection.map;
 
 import java.util.HashMap;
 

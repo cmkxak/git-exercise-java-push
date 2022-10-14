@@ -1,4 +1,4 @@
-package lecture.lecutre_1006.file;
+package lecture.lecture_1006.file;
 
 import java.io.File;
 

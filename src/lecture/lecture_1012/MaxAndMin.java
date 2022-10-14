@@ -1,4 +1,4 @@
-package lecture.lectrue_1012;
+package lecture.lecture_1012;
 
 interface Compare{
     boolean doSomeThing(int a, int b);

@@ -1,4 +1,4 @@
-package lecture.lecutre_1006.collection.list;
+package lecture.lecture_1006.collection.list;
 
 public class RandomAlphabetGenerator implements AlphabetGenerator{
 

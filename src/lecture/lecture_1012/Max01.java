@@ -1,4 +1,4 @@
-package lecture.lectrue_1012;
+package lecture.lecture_1012;
 
 /**
  * 코드업 2081
@@ -16,6 +16,20 @@ public class Max01 {
         }
         System.out.println(max);
         System.out.println(maxIdx);
+    }
+
+    public void getMin(int[] arr){
+        int min = arr[0];
+        int minIdx = 0;
+
+        for(int i = 1;i < arr.length; i++){
+            if (arr[i] < min){
+                min = arr[i];
+                minIdx = i;
+            }
+        }
+        System.out.println(min);
+        System.out.println(minIdx);
     }
 
     public static void main(String[] args) {

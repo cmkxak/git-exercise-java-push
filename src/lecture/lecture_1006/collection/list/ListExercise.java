@@ -1,4 +1,4 @@
-package lecture.lecutre_1006.collection.list;
+package lecture.lecture_1006.collection.list;
 
 import java.util.ArrayList;
 import java.util.List;

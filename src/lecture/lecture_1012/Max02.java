@@ -1,4 +1,4 @@
-package lecture.lectrue_1012;
+package lecture.lecture_1012;
 
 import java.util.Arrays;
 

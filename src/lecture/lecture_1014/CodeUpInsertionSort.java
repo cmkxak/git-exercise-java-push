@@ -29,7 +29,6 @@ public class CodeUpInsertionSort {
         }
 
         CodeUpInsertionSort is = new CodeUpInsertionSort();
-
         is.insertionSort(arr);
 
         for(int a: arr){
