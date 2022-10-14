@@ -4,13 +4,16 @@ import java.util.Arrays;
 
 public class InsertionSort01 {
     public int[] insertionSort(int[] arr){
-        int i = 1;
         int tmp;
 
-        if(arr[i] < arr[i-1]){
-            tmp = arr[i];
-            arr[i] = arr[i-1];
-            arr[i-1] = tmp;
+        for(int i =1; i<arr.length; i++){
+            for(int j= i; j>0; j--){
+                if(arr[j] < arr[j-1]){
+                    tmp = arr[j];
+                    arr[j] = arr[j-1];
+                    arr[j-1] = tmp;
+                }
+            }
         }
         return arr;
     }
