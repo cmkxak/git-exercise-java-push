@@ -15,6 +15,6 @@
 - <a href = "https://github.com/cmkxak/likelion-java-course/tree/Main/src/main/java/com/likelion/lecture"> 알고리즘 </a> 
 - 토비의 스프링 chap 1,2
 ----
-### 💬 10.17 - 10.21(Week 6)
+### 💬 10.24 - 10.28(Week 6)
 - <a href = "https://github.com/cmkxak/likelion-java-course/tree/Main/src/main/java/com/likelion/lecture"> 알고리즘 </a> 
 - 토비의 스프링 chap 3. template
