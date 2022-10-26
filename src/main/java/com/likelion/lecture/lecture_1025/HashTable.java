@@ -1,17 +1,46 @@
 package com.likelion.lecture.lecture_1025;
 
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class HashTable {
+
+    class Node{
+        String key;
+        Integer value;
+
+        public Node(String key, Integer value) {
+            this.key = key;
+            this.value = value;
+        }
+
+        public String getKey() {
+            return key;
+        }
+
+        public void setKey(String key) {
+            this.key = key;
+        }
+
+        public Integer getValue() {
+            return value;
+        }
+
+        public void setValue(Integer value) {
+            this.value = value;
+        }
+    }
+
     private int size = 10000;
-    private int[] hashTable = new int[size];
+    private List<Node>[] hashTable = new ArrayList[1000];
 
     public HashTable(){}
 
     public HashTable(int size) {
         this.size = size;
-        this.hashTable = new int[size];
+        this.hashTable = new ArrayList[1000];
     }
 
     public int hash(String key){
@@ -23,12 +52,23 @@ public class HashTable {
     }
 
     public void insert(String key, int value){
-        this.hashTable[hash(key)] = value;
-        System.out.println(key + " " + hash(key) + "방에 저장되었습니다.");
+        int idx = hash(key);
+        if(this.hashTable[idx] == null){
+            this.hashTable[idx] = new ArrayList<>();
+        }
+        //Map, or Object
+        this.hashTable[idx].add(new Node(key, value));
     }
 
-    public int search(String key){
-        return this.hashTable[hash(key)];
+    public Integer get(String key) {
+        List<Node> nodes = this.hashTable[hash(key)];
+        for (Node node : nodes) {
+            if (key.equals(node.getKey())) {
+                System.out.println(node.getKey() + " 는(은) " + node.getValue() + " 방에 저장되었습니다. ");
+                return node.value;
+            }
+        }
+        return null;
     }
 
     public static void main(String[] args) {
@@ -38,8 +78,13 @@ public class HashTable {
                 "JunhaHwang"};
         HashTable hashTableEx = new HashTable(200);
         Set<String> nameSet = new HashSet<>();
+
         for (int i = 0; i < names.length; i++) {
             hashTableEx.insert(names[i], hashTableEx.hash(names[i]));
+        }
+
+        for (int i = 0; i < names.length; i++) {
+            hashTableEx.get(names[i]);
         }
 
     }
