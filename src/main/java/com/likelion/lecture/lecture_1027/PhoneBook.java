@@ -1,4 +1,4 @@
-package com.likelion.lecture_1027;
+package com.likelion.lecture.lecture_1027;
 
 import java.util.HashSet;
 
@@ -18,7 +18,7 @@ public class PhoneBook {
                         return false;
                 }
             }
-            return true;
         }
+        return true;
     }
 }

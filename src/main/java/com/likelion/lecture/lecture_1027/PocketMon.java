@@ -1,4 +1,4 @@
-package com.likelion.lecture_1027;
+package com.likelion.lecture.lecture_1027;
 
 import java.util.HashSet;
 import java.util.Set;
