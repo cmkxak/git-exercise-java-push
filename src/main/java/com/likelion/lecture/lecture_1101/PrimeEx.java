@@ -1,13 +1,12 @@
 package com.likelion.lecture.lecture_1101;
 
-public class PrimeEx implements PrimeChecker{
-    boolean someOperation(int a, int b){
-        return a<b;
-    }
+interface StatementStrategy {
+    boolean compare(int a, int b);
+}
 
-
-    public boolean isPrime(int num){
-        for(int i=2; someOperation(i, num) ;i++){
+public class PrimeEx {
+    public boolean isPrime(int num, StatementStrategy stmt){
+        for(int i=2; stmt.compare(i, num); i++){
             if(num % i == 0) return false;
         }
         return true;
@@ -16,10 +15,14 @@ public class PrimeEx implements PrimeChecker{
     public static void main(String[] args) {
         PrimeEx prime = new PrimeEx();
         int arr[] = {13, 17, 19, 8};
-        for (int n : arr) {
-            if(prime.isPrime(n)){
-                System.out.println(n + "은 소수 입니다.");
-            }
+        for (int i : arr) {
+            boolean isPrime = prime.isPrime(i, new StatementStrategy() {
+                @Override
+                public boolean compare(int a, int b) {
+                    return a < b;
+                }
+            });
+            System.out.println(i+ "의 소수 여부 : " + isPrime);
         }
     }
 }
