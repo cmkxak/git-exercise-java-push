@@ -16,13 +16,10 @@ public class PrimeEx {
         PrimeEx prime = new PrimeEx();
         int arr[] = {13, 17, 19, 8};
         for (int i : arr) {
-            boolean isPrime = prime.isPrime(i, new StatementStrategy() {
-                @Override
-                public boolean compare(int a, int b) {
-                    return a < b;
-                }
-            });
-            System.out.println(i+ "의 소수 여부 : " + isPrime);
+            boolean isPrime = prime.isPrime(i, (a,b)-> a<b);
+            boolean isPrime2 = prime.isPrime(i, (a,b)-> a<b/2);
+            boolean isPrime3 = prime.isPrime(i, (a,b)-> a*a<b);
+            System.out.println(i+ "의 소수 여부 : " + isPrime3);
         }
     }
 }
