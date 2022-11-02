@@ -6,8 +6,11 @@ import java.util.List;
 
 public class PrimeEx {
     private final int N = 50;
+    List<Integer> nums;
 
-    List<Integer> nums = new ArrayList<>();
+    public PrimeEx() {
+        this.nums = new ArrayList<>(N);
+    }
 
     public void setNums(){
         for(int i = 2; i< N; i++){
@@ -21,21 +24,30 @@ public class PrimeEx {
         });
     }
 
-    public void eratosthenes(){
-        for(int i = 2 ; i< 10; i++){
-            if (isPrime(i)){
-                for(int j=i;j< N;j*=i){
-                    nums.remove(j);
-                }
+    public boolean isPrime(int num){
+        for(int i = 2; i * i < num; i++){
+            if(num % i == 0) {
+                return false;
             }
         }
+        return true;
     }
 
+    public int solution(int num){
+        setNums();
+        for(int i = 2; i*i <= N; i++){
+            for (int j=0;j<nums.size();j++){
+                if(nums.get(j) % i == 0 && nums.get(j) > i)
+                    nums.remove(j);
+            }
+        }
+        getNums();
+        return nums.size();
+    }
 
     public static void main(String[] args) {
         PrimeEx prime = new PrimeEx();
-        prime.eratosthenes();
-
+        prime.solution(1000000);
     }
 
 
