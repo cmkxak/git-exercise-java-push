@@ -12,7 +12,7 @@ public class CodeUp2083 {
 
             if (nums[mid] == key) {
                 System.out.println(mid + 1);
-                System.exit(0);
+                return;
             }else if(nums[mid] < key){
                 start = mid + 1;
             }else{
