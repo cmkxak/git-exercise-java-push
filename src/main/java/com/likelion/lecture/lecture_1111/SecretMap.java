@@ -5,18 +5,16 @@ public class SecretMap {
         String[] answer = new String[n];
         String binaryString = "";
 
-        //1. 지도1과 지도2의 or 연산 결과를 2진수로 변환
         for (int i = 0; i < n; i++) {
+            //둘 중에 하나만 1이어도 지도 상에서 1이 되므로, or 연산
             binaryString = Integer.toBinaryString(arr1[i] | arr2[i]);
+            binaryString = binaryString.replaceAll("1", "#");
+            binaryString = binaryString.replaceAll("0", " ");
+
+            //앞에 0이 오는 경우를 대비해서 자릿수를 맞춰준다.
+            binaryString = String.format("%" + n + "s", binaryString);
             answer[i] = binaryString;
         }
-
-        //2.변환한 문자열을 #과 공백으로 대체
-        for (int i = 0; i < n; i++) {
-            answer[i].replace('0', " ");
-            answer[i].replace('1', "#");
-        }
-
         return answer;
     }
 }
