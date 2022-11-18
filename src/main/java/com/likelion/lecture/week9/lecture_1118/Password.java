@@ -1,21 +1,26 @@
 package com.likelion.lecture.week9.lecture_1118;
 
-import java.util.Arrays;
+//불통과
 
 public class Password {
-    public String solution(String s, int n){
+    public String solution(String s, int n) {
         String answer = "";
         char[] chars = s.toCharArray();
         for (char c : chars) {
-            if(c == ' '){
+            if (c == ' ') {
                 answer += c;
-                continue;
-            }else if(c >= 'a' && c < 'z'){
-                answer+= (char) (c + n);
-            }else if(c >= 'A' && c < 'Z'){
-                answer+= (char) (c + n);
-            }else{
-                answer += (char) (c - 26 + n);
+            } else if (c >= 'a' && c <= 'z') {
+                if (c + n > 'z') {
+                    answer += (char) (c - 26 + n);
+                } else {
+                    answer += (char) (c + n);
+                }
+            } else if (c >= 'A' && c <= 'Z') {
+                if (c + n > 'Z') {
+                    answer += (char) (c - 26 + n);
+                } else {
+                    answer += (char) (c + n);
+                }
             }
         }
         return answer;
