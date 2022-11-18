@@ -1,12 +1,12 @@
 package com.likelion.lecture.week9.lecture_1118;
 
-//프로그래머스 불통과..
+//통과
 
 public class SumOfProcession {
     public int[][] solution(int[][] arr1, int[][] arr2) {
-        int[][] answer = new int[arr1.length][arr1.length];
+        int[][] answer = new int[arr1.length][arr1[0].length];
         for (int i = 0; i < arr1.length; i++) {
-            for (int j = 0; j < arr1.length; j++) {
+            for (int j = 0; j < arr1[0].length; j++) {
                 answer[i][j] = arr1[i][j] + arr2[i][j];
             }
         }
