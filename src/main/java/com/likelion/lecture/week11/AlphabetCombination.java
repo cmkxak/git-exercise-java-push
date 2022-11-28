@@ -20,6 +20,15 @@ public class AlphabetCombination {
         printAlphabet(size, c);
     }
 
+    private void printAlphabets(String prefix, char c){
+        if (c > 'Z') return;
+
+        System.out.println(prefix + c);
+        printAlphabets(prefix, (char) (c+1));
+    }
+
+
+
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         AlphabetCombination ac = new AlphabetCombination();
@@ -28,5 +37,6 @@ public class AlphabetCombination {
         char c = 'A';
 
         ac.printAlphabet(size,c);
+        ac.printAlphabets("AA", 'A');
     }
 }
