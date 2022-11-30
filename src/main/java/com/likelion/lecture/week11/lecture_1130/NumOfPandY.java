@@ -21,9 +21,15 @@ public class NumOfPandY {
         return pCount == yCount;
     }
 
+    //lambda를 활용한 풀이
+    boolean solution2(String s){
+        s = s.toUpperCase();
+        return s.chars().filter(c -> c == 'P').count() == s.chars().filter(c -> c == 'Y').count();
+    }
+
     public static void main(String[] args) {
         NumOfPandY numOfPandY = new NumOfPandY();
         String s = "pPoooyY";
-        System.out.println(numOfPandY.solution(s));
+        System.out.println(numOfPandY.solution2(s));
     }
 }
